@@ -18,6 +18,16 @@ soup = BeautifulSoup(page, 'html.parser')
 title = soup.title
 
 print(title.text)
+
+movie_rows = soup.findAll('tr')
+#print(movie_rows)
+
+for x in range(1,6):
+    td = movie_rows[x].findAll('td')
+    print(td[1].text)
+    input()
+
+    
 ##
 ##
 ##
